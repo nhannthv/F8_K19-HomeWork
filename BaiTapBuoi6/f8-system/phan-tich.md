@@ -4,7 +4,7 @@ Câu 2: Nếu một phần tử HTML có cả h1, .title, và #main cùng set co
 
 Câu 3: Nếu thêm style="color: pink" trực tiếp vào phần tử ở Câu 2, kết quả phần tử đó có màu pink
 
-Câu 4: theme.css có thể ghi đè base.css vì nó thêm vào sau trong html. Để ghi đè thành công thì bộ chọn (selectors) trong cả 2 file đó phải là như nhau
+Câu 4: theme.css có thể ghi đè base.css vì nó thêm vào sau trong html. Để ghi đè thành công thì bộ chọn (selectors) trong cả 2 file đó phải là như nhau hoặc bộ chọn trong file theme.css phải chi tiết hơn
 
 Câu 5: có hai phần tử đều dùng class .title nhưng hiển thị màu khác nhau, vì độ ưu tiên khác nhau của nơi viết css.
 
