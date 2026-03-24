@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal - Đóng bằng nút và bằng layer nền</title>
+
+    <style>
+        /* Css chung */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+
+        /* Trang trí nút bấm */
+        .open-btn,
+        .close-btn {
+            display: inline-block;
+            min-width: 10rem;
+            padding: 0.8em 1.6rem;
+            text-align: center;
+        }
+
+        .open-btn {
+            background-color: #3b82f6;
+            color: #fff;
+            margin: 5rem 0 0 5rem;
+        }
+
+        .close-btn {
+            margin-top: 2rem;
+            background-color: #ef4444;
+            color: #fff;
+        }
+
+        /* 
+            Trang trí .overlay
+        */
+        .overlay {
+            display: block;
+            width: 100%;
+            height: 100vh;
+            padding-top: 20rem;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Chỗ nào click chuột được thì trỏ chuột hiện bàn tay */
+        .open-btn,
+        .overlay,
+        .close-btn {
+            cursor: pointer;
+        }
+
+        /* 
+            Con số mang tính ước lượng, vì k thể dùng position để căn giữa theo chiều dọc
+        */
+        .modal {
+            width: 50%;
+            height: 50%;
+            background-color: #fff;
+            margin: 0 auto;
+            padding-top: 5rem;
+            text-align: center;
+        }
+
+        /* Ban đầu cho #modal-toggle và .overlay ẩn đi */
+        #modal-toggle,
+        .overlay {
+            display: none;
+        }
+
+        /* Khi #modal-toggle:checked thì .overlay hiện ra */
+        /* Vì đều for đến #modal-toggle nên khi click vào .overlay hay .close-btn thì đều tắt .overlay */
+        #modal-toggle:checked~.overlay {
+            display: block;
+        }
+
+        /* Khi .overlay hiện ra thì .open-btn ẩn đi */
+        #modal-toggle:checked+.open-btn {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="modal-toggle" id="modal-toggle">
+    <label for="modal-toggle" class="open-btn">Mở modal</label>
+    <label for="modal-toggle" class="overlay">
+        <div class="modal">
+            <p>Đây là nội dung thông báo!</p>
+            <label for="modal-toggle" class="close-btn">Đóng</label>
+        </div>
+    </label>
+</body>
+
+</html>
