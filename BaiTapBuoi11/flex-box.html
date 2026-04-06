@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Style Css -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-size: 1.6rem;
+        }
+
+        .container {
+            display: flex;
+            width: 60rem;
+            height: 20rem;
+            margin: 5rem auto 0;
+            border: 1px solid red;
+        }
+
+
+        /* Container 1, 2 */
+        .container-1,
+        .container-2 {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container-2 {
+            flex-direction: row-reverse;
+        }
+
+
+        /* Container 3 */
+        .container-3 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-3 .box-2 {
+            margin-top: 2rem;
+            margin-bottom: 5rem;
+        }
+
+
+        /* Container 4 */
+        .container-4 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-4 .box-2 {
+            margin-left: 1rem;
+            margin-right: 4rem;
+        }
+
+
+        /* Container 5 */
+        .container-5 {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+        /* Container 6 */
+        .container-6 {
+            justify-content: space-between;
+        }
+
+        .container-6 .box {
+            margin-top: 1rem;
+        }
+
+
+        /* Container 7 */
+        .container-7 {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container-7 .box-2 {
+            margin: 6rem 0 2rem;
+        }
+
+
+        /* Container 8 */
+        .container-8 {
+            align-items: center;
+        }
+
+        .container-8 .box-2 {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* Container 9 */
+        .container-9 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-9 .box-2 {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+
+        .container-9 .box-1 {
+            margin-top: -2rem;
+        }
+
+        .container-9 .box-3 {
+            margin-top: 2rem;
+        }
+
+
+        /* Container-10 */
+        .container-10 {
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container-10 .box-1 {
+            align-self: flex-start;
+        }
+
+        .container-10 .box-3 {
+            align-self: flex-end;
+        }
+
+
+
+        /* Chung cho box */
+        .box {
+            width: 6rem;
+            height: 6rem;
+            background-color: #00aedf;
+            color: #fff;
+            font-size: 2rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Container 1 -->
+    <div class="container container-1">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 2 -->
+    <div class="container container-2">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 3 -->
+    <div class="container container-3">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 4 -->
+    <div class="container container-4">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 5 -->
+    <div class="container container-5">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 6 -->
+    <div class="container container-6">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 7 -->
+    <div class="container container-7">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 8 -->
+    <div class="container container-8">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 9 -->
+    <div class="container container-9">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+
+
+    <!-- Container 10 -->
+    <div class="container container-10">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+    </div>
+</body>
+
+</html>
