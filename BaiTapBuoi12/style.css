@@ -1,0 +1,162 @@
+/* Reset Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.6rem;
+    background-color: #ebf5fe;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Dàn layout */
+.card {
+    --cols: 3;
+    --spacing: 2rem;
+
+    width: 120rem;
+    margin: 0 auto;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--spacing));
+}
+
+.card-item {
+    width: calc(100% / var(--cols) - var(--spacing));
+    margin-left: var(--spacing);
+    margin-top: var(--spacing);
+    padding: 3rem;
+    background-color: #fff;
+    border-radius: 0.8rem;
+    border: 1px solid #e0e0e0;
+    transition: border 0.25s;
+}
+
+
+/* Hover vào item */
+.card-item:first-child:hover {
+    border-width: 3px;
+    border-color: #ff6b6b;
+}
+
+.card-item:nth-child(2):hover {
+    border-width: 3px;
+    border-color: #4ecdc4;
+}
+
+.card-item:nth-child(3):hover {
+    border-width: 3px;
+    border-color: #f9a825;
+}
+
+.card-item:nth-child(4):hover {
+    border-width: 3px;
+    border-color: #5e9cff;
+}
+
+.card-item:nth-child(5):hover {
+    border-width: 3px;
+    border-color: #9b59b6;
+}
+
+.card-item:last-child:hover {
+    border-width: 3px;
+    border-color: #7cb342;
+}
+
+
+/* card-top */
+.card-top {
+    display: flex;
+    align-items: center;
+}
+
+.card-top i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 6rem;
+    height: 6rem;
+    font-size: 3.2rem;
+    color: #fff;
+    border-radius: 50%;
+}
+
+
+/* Màu nền icon */
+.card-item:first-child .card-top i {
+    background-color: #ff6b6b;
+}
+
+.card-item:nth-child(2) .card-top i {
+    background-color: #4ecdc4;
+}
+
+.card-item:nth-child(3) .card-top i {
+    background-color: #f9a825;
+}
+
+.card-item:nth-child(4) .card-top i {
+    background-color: #5e9cff;
+}
+
+.card-item:nth-child(5) .card-top i {
+    background-color: #9b59b6;
+}
+
+.card-item:last-child .card-top i {
+    background-color: #7cb342;
+}
+
+
+/* card-title */
+.card-top .card-title {
+    margin-left: 1rem;
+    font-size: 2rem;
+    line-height: 1.3;
+    font-weight: 600;
+    color: #333;
+}
+
+
+/* card-desc */
+.card-desc {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    font-weight: 400;
+    color: #666;
+}
+
+
+/* learn-more */
+.learn-more {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #2196f3;
+    transition: border 0.25s;
+}
+
+.learn-more:hover {
+    border-bottom: 0.2rem solid #2196f3;
+}
