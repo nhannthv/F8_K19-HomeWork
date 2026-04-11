@@ -1,0 +1,136 @@
+/* Reset Css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+}
+
+/* Style Css*/
+
+/* Strip-list */
+/* chiếm toàn viewport */
+.strip-list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+
+/* Strip-item */
+.strip-item {
+    /* ban đầu các strip có kích thước bằng nhau */
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+
+    /* vì xét width cố định cho content, nên nếu co lại nhỏ hơn content thì sẻ ẩn content đi */
+    overflow: hidden;
+
+    /* khi co lại nhường chỗ cho strip-item:hover thì tối thiểu phải chứa được tiêu đề */
+    /* thử từng giá trị => chọn 12rem */
+    min-width: 12rem;
+    transition: flex 0.5s;
+
+    position: relative;
+
+    cursor: pointer;
+}
+
+
+/* khi hover vào strip-item nào thì strip-item đó rộng ra */
+/* kết hợp với sự co lại của các strip-item khác để hiệu ứng đẹp hơn */
+.strip-list:hover .strip-item {
+    flex: 0.5;
+}
+
+.strip-list .strip-item:hover {
+    flex: 5;
+}
+
+
+/* màu nền cho các strip-item */
+.strip-item:nth-child(1) {
+    background-color: forestgreen;
+}
+
+.strip-item:nth-child(2) {
+    background-color: khaki;
+}
+
+.strip-item:nth-child(3) {
+    background-color: dodgerblue;
+}
+
+.strip-item:nth-child(4) {
+    background-color: orange;
+}
+
+.strip-item:nth-child(5) {
+    background-color: violet;
+}
+
+
+/* Content */
+/* vì là flex-item nên xét thêm flex-shrink: 0; để cố định kích thước */
+.content {
+    width: 35rem;
+    flex-shrink: 0;
+}
+
+.content h2 {
+    font-size: 2rem;
+    font-weight: 900;
+}
+
+/* Image */
+/* căn theo strip-item */
+/* ban đầu ẩn đi */
+/* k cần xét z-index vì nằm trước overlay trong html */
+/* khi ảnh hiện lên thì sẽ che content vì nằm lớp trên */
+.image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* k dùng inset: 0; vì ảnh k lấp hết strip-item */
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+.strip-item:hover .image,
+.strip-item:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Overlay */
+/* k cần xét z-index vì nằm trước img trong html */
+.overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+}
